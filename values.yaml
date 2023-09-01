@@ -98,6 +98,15 @@ nodepools:
         vm.overcommit_memory=1
         kernel.panic=10
         kernel.panic_on_oops=1
+    - path: /etc/rancher/rke2/audit-policy.yaml
+      owner: root
+      content:
+        apiVersion: audit.k8s.io/v1
+        kind: Policy
+        metadata:
+          creationTimestamp: null
+        rules:
+        - level: None
     runcmd:
     - apt update
     - systemctl restart systemd-sysctl
