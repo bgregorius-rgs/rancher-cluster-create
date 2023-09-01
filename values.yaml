@@ -21,7 +21,7 @@ registries:
 rke:
   localClusterAuthEndpoint:
     enabled: false
-profile: cis-1.6
+profile: ""
 selinux: true
 secrets_encryption: true
 protect_kernel_defaults: true
