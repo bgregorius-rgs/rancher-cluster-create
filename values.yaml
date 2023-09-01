@@ -62,7 +62,7 @@ nodepools:
   deviceName: /dev/sda1
   encryptEbsVolume: false
   endpoint: ""
-  iamInstanceProfile: AWSK8sRole
+  iamInstanceProfile: atoy-demo-role
   insecureTransport: false
   instanceType: t3a.xlarge
   region: us-east-1
