@@ -1,0 +1,15 @@
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: rke2-iam-cluster
+  namespace: fleet-local
+spec:
+  branch: iam
+  repo: https://github.com/atoy3731/rancher-cluster-create.git
+  targets:
+    - clusterSelector:
+        matchExpressions:
+          - key: provider.cattle.io
+            operator: NotIn
+            values:
+              - harvester
