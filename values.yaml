@@ -57,7 +57,8 @@ nodepools:
   name: control-plane-prod
   ami: ami-042cd2fd384327f78
   deviceName: /dev/sda1
-  encryptEbsVolume: false
+  encryptEbsVolume: true
+  kmsKey: "7e3c8a9b-863d-474f-9dd4-21641a6acf07"
   endpoint: ""
   iamInstanceProfile: atoy-demo-role
   insecureTransport: false
