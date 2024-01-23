@@ -1,5 +1,5 @@
 cloudprovider: amazonec2
-cloudCredentialSecretName: cattle-global-data:aws-creds
+cloudCredentialSecretName: cattle-global-data:cc-g2vzn
 cluster:
   annotations: {}
   labels:
