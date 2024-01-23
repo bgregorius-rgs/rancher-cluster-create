@@ -61,7 +61,7 @@ nodepools:
   keypairName: ""
   securityGroupReadonly: false
   sshKeyContents: ""
-  subnetId: subnet-0b305e182664cd9f2
+  subnetId: subnet-04ed5758911e71282
   monitoring: false
   openPort:
   - "8080"
