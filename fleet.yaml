@@ -1,8 +1,7 @@
 defaultNamespace: default
 helm:
-  repo: https://github.com/bgregorius-rgs/rancher-cluster-create/charts/
-  chart: cluster-template
-  version: 0.0.7
+  chart: ./chart
+  version: 0.0.9
   # releaseName: cluster-template-prod-green
   valuesFiles:
     - values.yaml
