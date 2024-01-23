@@ -1,11 +1,11 @@
 apiVersion: fleet.cattle.io/v1alpha1
 kind: GitRepo
 metadata:
-  name: rke2-iam-cluster
+  name: k3s-test-cluster
   namespace: fleet-local
 spec:
   branch: main
-  repo: https://github.com/atoy3731/rancher-cluster-create.git
+  repo: https://github.com/bgregorius-rgs/rancher-cluster-create.git
   targets:
     - clusterSelector:
         matchExpressions:

@@ -1,6 +1,6 @@
 defaultNamespace: default
 helm:
-  repo: https://brooksphilip.github.io/charts/
+  repo: https://github.com/bgregorius-rgs/rancher-cluster-create/charts/
   chart: cluster-template
   version: 0.0.7
   # releaseName: cluster-template-prod-green
@@ -11,7 +11,7 @@ diff:
    - apiVersion: provisioning.cattle.io/v1
      kind: Cluster
      namespace: fleet-default
-     name: rke2-demo-cluster
+     name: k3s-demo-cluster
      operations:
      - {"op": "remove", "path": "/spec/rkeConfig/machinePools"}
      - {"op": "remove", "path": "/spec/rkeConfig/registries/configs/rgcrprod.azurecr.us"}

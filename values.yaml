@@ -1,23 +1,14 @@
 cloudprovider: amazonec2
-cloudCredentialSecretName: cattle-global-data:cc-27qqv
+cloudCredentialSecretName: cattle-global-data:aws-creds
 cluster:
   annotations: {}
   labels:
     location: aws
-    carbide-public: true
-    airgapdocs: deploy
-  name: rke2-demo-cluster
-kubernetesVersion: v1.26.8+rke2r1
+  name: k3s-demo-cluster
+kubernetesVersion: v1.26.11+k3s2
 cni: canal
-system_default_registry: rgcrprod.azurecr.us
 monitoring:
   enabled: false
-registries:
-  configs:
-    rgcrprod.azurecr.us:
-      authConfigSecretName: registryconfig-auth-t95qm
-      caBundle: ''
-      insecureSkipVerify: false
 rke:
   localClusterAuthEndpoint:
     enabled: false
@@ -52,15 +43,16 @@ nodepools:
   # displayName: control-plane-a
   labels: {}
   taints: {}
-  quantity: 3
+  quantity: 1
   paused: false
   name: control-plane-prod
+  # Ubuntu 22.10
   ami: ami-042cd2fd384327f78
   deviceName: /dev/sda1
   encryptEbsVolume: true
   # kmsKey: "7e3c8a9b-863d-474f-9dd4-21641a6acf07"
   endpoint: ""
-  iamInstanceProfile: atoy-demo-role
+  # iamInstanceProfile: atoy-demo-role
   insecureTransport: false
   instanceType: t3a.xlarge
   region: us-east-1
@@ -78,12 +70,12 @@ nodepools:
   - "22"
   privateAddressOnly: false
   requestSpotInstance: false
-  tags: Owner,pbrooks,KeepRunning,true
+  tags: Owner,bgregorius,KeepRunning,true
   retries: 5
   rootSize: 20
   sshUser: ubuntu
   volumeType: gp2
-  vpcId: vpc-0eab1dd0db2c38f85
+  vpcId: vpc-02eed1fed7f5b048c
   useEbsOptimizedInstance: false
   usePrivateAddress: true
   userdata: |
