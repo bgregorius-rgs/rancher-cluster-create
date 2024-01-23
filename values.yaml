@@ -63,11 +63,6 @@ nodepools:
   sshKeyContents: ""
   subnetId: subnet-04ed5758911e71282
   monitoring: false
-  openPort:
-  - "8080"
-  - "8443"
-  - "443"
-  - "22"
   privateAddressOnly: false
   requestSpotInstance: false
   tags: Owner,bgregorius,KeepRunning,true
