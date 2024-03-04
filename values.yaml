@@ -61,7 +61,7 @@ nodepools:
   keypairName: ""
   securityGroupReadonly: false
   sshKeyContents: ""
-  subnetId: subnet-04ed5758911e71282
+  subnetId: subnet-0b010a41304914b66
   monitoring: false
   privateAddressOnly: false
   requestSpotInstance: false
@@ -70,7 +70,7 @@ nodepools:
   rootSize: 20
   sshUser: ubuntu
   volumeType: gp2
-  vpcId: vpc-02eed1fed7f5b048c
+  vpcId: vpc-0ee9740ec41fda259
   useEbsOptimizedInstance: false
   usePrivateAddress: true
   userdata: |
